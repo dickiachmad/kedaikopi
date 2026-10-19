@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "Branding": {
+      "collection": "branding",
+      "fields": {
+        "storeName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "titleBarText": { "type": "string" },
+        "logoType": { "type": "string" },
+        "presetIcon": { "type": "string" },
+        "customLogoUrl": { "type": "string" },
+        "address": { "type": "string" },
+        "instagram": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "Product": {
+      "collection": "products",
+      "fields": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "cost": { "type": "number" },
+        "stock": { "type": "number" },
+        "minStock": { "type": "number" },
+        "unit": { "type": "string" },
+        "sku": { "type": "string" },
+        "isAvailable": { "type": "boolean" },
+        "hasVariants": { "type": "boolean" }
+      }
+    },
+    "Ingredient": {
+      "collection": "ingredients",
+      "fields": {
+        "name": { "type": "string" },
+        "stock": { "type": "number" },
+        "minStock": { "type": "number" },
+        "unit": { "type": "string" },
+        "costPerUnit": { "type": "number" }
+      }
+    },
+    "Transaction": {
+      "collection": "transactions",
+      "fields": {
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "cashierId": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    },
+    "CashierAccount": {
+      "collection": "cashierAccounts",
+      "fields": {
+        "username": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "InventoryMutation": {
+      "collection": "inventoryMutations",
+      "fields": {
+        "targetId": { "type": "string" },
+        "targetName": { "type": "string" },
+        "type": { "type": "string" },
+        "quantity": { "type": "number" },
+        "timestamp": { "type": "string" }
+      }
+    }
+  }
+}

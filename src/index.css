@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4A2C20;
+  --color-secondary: #6F4534;
+  --color-caramel: #C8894A;
+  --color-gold: #E5B567;
+  --color-app-bg: #F7F2EA;
+  --color-app-card: #FFFDF9;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F7F2EA;
+    color: #4A2C20;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Numeric alignment for financial & inventory counters */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars for warm coffee artisan theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F2EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8894A;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6F4534;
+}
+
+/* Utilities for touch and smooth interactions */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print optimizations for thermal receipt and shift settlement reports */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  /* Make receipt and shift settlement containers visible */
+  .receipt-container,
+  .receipt-container *,
+  .printable-settlement,
+  .printable-settlement * {
+    visibility: visible;
+  }
+
+  .receipt-container,
+  .printable-settlement {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    max-width: 80mm !important;
+    margin: 0 auto !important;
+    padding: 10px 14px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ensure text inside receipt is high contrast black for thermal heads */
+  .receipt-container p,
+  .receipt-container span,
+  .receipt-container div,
+  .printable-settlement p,
+  .printable-settlement span,
+  .printable-settlement div {
+    color: #000000 !important;
+  }
+
+  /* Explicitly hide background backdrops, dialog chrome, and buttons */
+  .no-print,
+  .no-print * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 0;
+  }
+}
+
+
+

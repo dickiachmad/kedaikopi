@@ -1,0 +1,6 @@
+{
+  "name": "Kedai Kopi Efek Kafein",
+  "description": "Sistem informasi penjualan kedai kopi Efek Kafein: transaksi kasir POS, kelola stok menu & bahan baku, serta laporan penjualan harian real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
